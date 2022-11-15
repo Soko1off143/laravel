@@ -8,4 +8,8 @@ class TestController extends Controller
     public function show() {
         return view('test');
     }
+
+    public function whereToFindUs() {
+        return view('pages.whereToFindUs');
+    }
 }

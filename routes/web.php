@@ -16,3 +16,4 @@ Route::get('/', function () {
 });
 
 Route::get('/test', [App\Http\Controllers\TestController::class, 'show']);
+Route::get('/wheretofindus', [App\Http\Controllers\TestController::class, 'whereToFindUs']);
