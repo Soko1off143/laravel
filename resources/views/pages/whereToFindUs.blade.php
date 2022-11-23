@@ -10,7 +10,7 @@
 </head>
 <body>
     @include('elements.header')
-    @include('elements.whereToFindUs_Element')
+    
     @include('elements.footer')
 </body>
 </html>
