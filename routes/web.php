@@ -11,9 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/test', [App\Http\Controllers\ComicsController::class, 'test']);
+Route::get('/', [App\Http\Controllers\ComicsController::class, 'whereToFindUs']);
+Route::get('/catalog', [App\Http\Controllers\ComicsController::class, 'catalog']);
+Route::get('/comics{id}', [App\Http\Controllers\ComicsController::class, 'comics']);
 
-Route::get('/test', [App\Http\Controllers\TestController::class, 'show']);
 Route::get('/wheretofindus', [App\Http\Controllers\TestController::class, 'whereToFindUs']);
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

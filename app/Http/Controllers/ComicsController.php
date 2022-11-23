@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Comics;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ComicsController extends Controller
 {
@@ -81,5 +82,23 @@ class ComicsController extends Controller
     public function destroy(Comics $comics)
     {
         //
+    }
+
+    public function comics($id) {
+        $t = DB::table('comics') -> where('id', '=', $id)-> get();
+        return view('pages.comics', ['arr' => $t]);
+    }
+
+    public function catalog() {
+        $t = DB::table('comics') -> get();
+        return view('pages.catalog', ['arr' => $t]);
+    }
+
+    public function whereToFindUs() {
+        return view('pages.whereToFindUs');
+    }
+
+    public function test() {
+        return view('layouts.app');
     }
 }

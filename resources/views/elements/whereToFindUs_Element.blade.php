@@ -14,6 +14,6 @@
         <h2>Адрес магазина:</h2>
         <p>Омск, улица Дмитриева, дом 13, индекс: 644074</p>
         <p>С 10:00 до 18:00 каждый день</p>
-        <img src="media/img/logo/Logo_Black.png" alt="map">
+        <img src="media/img/map.jpg" alt="map">
     </div>
 </div>

@@ -2,9 +2,9 @@
     <div class="footer">
         <img class="logo" src="media/img/logo/Logo_White.png" alt="Logo White">
         <div class="links">
-            <a href="">Каталог</a>
+            <a href="http://localhost/laravel/public/catalog">Каталог</a>
             <a href="">О нас</a>
-            <a href="">Где нас найти?</a>
+            <a href="http://localhost/laravel/public/wheretofindus">Где нас найти?</a>
             <a href="">Вход</a>
             <a href="">Регистрация</a>
             <!-- <a href="">Выход</a> -->
