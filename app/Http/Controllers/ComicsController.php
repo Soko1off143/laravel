@@ -98,7 +98,21 @@ class ComicsController extends Controller
         return view('pages.whereToFindUs');
     }
 
-    public function test() {
+    public function auth() {
         return view('layouts.app');
+    }
+
+    public function admin() {
+        return view('admin.main');
+    }
+
+    public function adminComics() {
+        $t = DB::table('comics') -> get();
+        return view('admin.comics', ['arr' => $t]);
+    }
+
+    public function redactor($id) {
+        $t = DB::table('comics') -> where('id', '=', $id)-> get();
+        return view('admin.redactor', ['arr' => $t]);
     }
 }

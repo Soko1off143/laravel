@@ -5,9 +5,12 @@
             <a href="http://localhost/laravel/public/catalog">Каталог</a>
             <a href="">О нас</a>
             <a href="http://localhost/laravel/public/wheretofindus">Где нас найти?</a>
-            <a href="">Вход</a>
-            <a href="">Регистрация</a>
-            <!-- <a href="">Выход</a> -->
+            @if (Auth::check())
+                <a href="">Выход</a>
+            @else
+                <a href="http://localhost/laravel/public/login">Вход</a>
+                <a href="http://localhost/laravel/public/register">Регистрация</a>
+            @endif
         </div>
         <div class="split">
             <div class="socialsIcons">

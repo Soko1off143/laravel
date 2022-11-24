@@ -24,6 +24,7 @@ class CreateComicsTable extends Migration
             $table->string('pages');
             $table->string('img');
             $table->string('category');
+            $table->string('count');
         });
     }
 
