@@ -20,10 +20,16 @@ Route::get('/catalog', [App\Http\Controllers\ComicsController::class, 'catalog']
 Route::get('/comics{id}', [App\Http\Controllers\ComicsController::class, 'comics']);
 Route::get('/wheretofindus', [App\Http\Controllers\ComicsController::class, 'whereToFindUs']);
 
-Route::get('/admin', [App\Http\Controllers\ComicsController::class, 'admin']);
-Route::get('/admin/comics', [App\Http\Controllers\ComicsController::class, 'adminComics']);
-Route::get('/admin/comics/redactor/{id}', [App\Http\Controllers\ComicsController::class, 'redactor']);
+Route::get('/admin', [App\Http\Controllers\Admin::class, 'admin']);
+Route::get('/admin/comics', [App\Http\Controllers\Admin::class, 'adminComics']);
+Route::get('/admin/comics/delete{id}', [App\Http\Controllers\Admin::class, 'delete']);
+Route::get('/admin/comics/redactor{id}', [App\Http\Controllers\Admin::class, 'redactor']);
+Route::get('/admin/comics/redactor{id}/change', [App\Http\Controllers\Admin::class, 'change']);
+
+// Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

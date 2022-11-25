@@ -1,4 +1,4 @@
-<a href="http://localhost/laravel/public/admin">Вернуться назад</a>
+<a href="/Practice/laravel/public/admin">Вернуться назад</a>
 <table border="1">
     <tr>
         <td>Id</td>
@@ -26,8 +26,8 @@
             <td>{{$elem->category}}</td>
             <td>{{$elem->count}}</td>
             <td>
-                <a href="http://localhost/laravel/public/admin/comics/redactor/{{$elem->id}}">Редактировать</a>
-                <a href="">Удалить</a>
+                <a href="/Practice/laravel/public/admin/comics/redactor{{$elem->id}}">Редактировать</a>
+                <a href="/Practice/laravel/public/admin/comics/delete{{$elem->id}}">Удалить</a>
             </td>
         </tr>
     @endforeach

@@ -1,31 +1,25 @@
-<a href="http://localhost/laravel/public/admin/comics">Вернуться назад</a>
-<table border="1">
-    <tr>
-        <td>Id</td>
-        <td>Name</td>
-        <td>Price</td>
-        <td>Detail</td>
-        <td>Publisher</td>
-        <td>Year</td>
-        <td>Pages</td>
-        <td>Img</td>
-        <td>Category</td>
-        <td>Count</td>
-        <td></td>
-    </tr>
-    @foreach ($arr as $elem)
-        <tr>
-            <td>{{$elem->id}}</td>
-            <td><textarea>"{{$elem->name}}"</textarea></td>
-            <td><textarea>{{$elem->price}}</textarea></td>
-            <td><textarea cols="30" rows="10">{{$elem->detail}}</textarea></td>
-            <td><textarea>{{$elem->publisher}}</textarea></td>
-            <td><textarea>{{$elem->year}}</textarea></td>
-            <td><textarea>{{$elem->pages}}</textarea></td>
-            <td><textarea>{{$elem->img}}</textarea></td>
-            <td><textarea>{{$elem->category}}</textarea></td>
-            <td><textarea>{{$elem->count}}</textarea></td>
-        </tr>
-    @endforeach
-</table>
-<input type="submit">
+<a href="/Practice/laravel/public/admin/comics">Вернуться назад</a><br><br>
+@foreach ($arr as $elem)
+    <form action="/Practice/laravel/public/admin/comics/redactor{id}/change" method="POST">
+        <label>Название</label>
+        <input type="text" value="{{$elem->name}}"><br><br>
+        <label>Цена</label>
+        <input type="text" value="{{$elem->price}}"><br><br>
+        <label>Детальное описание</label>
+
+        <input type="text" value="{{$elem->detail}}"><br><br>
+        <label>Издатель</label>
+        <input type="text" value="{{$elem->publisher}}"><br><br>
+        <label>Год выпуска</label>
+        <input type="text" value="{{$elem->year}}"><br><br>
+        <label>Количество страниц</label>
+        <input type="text" value="{{$elem->pages}}"><br><br>
+        <label>Картинка</label>
+        <input type="text" value="{{$elem->img}}"><br><br>
+        <label>Категория</label>
+        <input type="text" value="{{$elem->category}}"><br><br>
+        <label>Количество</label>
+        <input type="text" value="{{$elem->count}}"><br><br>
+        <input type="submit">
+    </form>
+@endforeach

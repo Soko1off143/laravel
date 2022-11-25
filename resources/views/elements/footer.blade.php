@@ -2,14 +2,14 @@
     <div class="footer">
         <img class="logo" src="media/img/logo/Logo_White.png" alt="Logo White">
         <div class="links">
-            <a href="http://localhost/laravel/public/catalog">Каталог</a>
+            <a href="/Practice/laravel/public/catalog">Каталог</a>
             <a href="">О нас</a>
-            <a href="http://localhost/laravel/public/wheretofindus">Где нас найти?</a>
+            <a href="/Practice/laravel/public/wheretofindus">Где нас найти?</a>
             @if (Auth::check())
-                <a href="">Выход</a>
+                <a href="/Practice/laravel/public/logout">Выход</a>
             @else
-                <a href="http://localhost/laravel/public/login">Вход</a>
-                <a href="http://localhost/laravel/public/register">Регистрация</a>
+                <a href="/Practice/laravel/public/login">Вход</a>
+                <a href="/Practice/laravel/public/register">Регистрация</a>
             @endif
         </div>
         <div class="split">

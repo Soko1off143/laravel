@@ -85,13 +85,13 @@ class ComicsController extends Controller
     }
 
     public function comics($id) {
-        $t = DB::table('comics') -> where('id', '=', $id)-> get();
-        return view('pages.comics', ['arr' => $t]);
+        $date = DB::table('comics') -> where('id', '=', $id)-> get();
+        return view('pages.comics', ['arr' => $date]);
     }
 
     public function catalog() {
-        $t = DB::table('comics') -> get();
-        return view('pages.catalog', ['arr' => $t]);
+        $date = DB::table('comics') -> get();
+        return view('pages.catalog', ['arr' => $date]);
     }
 
     public function whereToFindUs() {
@@ -100,19 +100,5 @@ class ComicsController extends Controller
 
     public function auth() {
         return view('layouts.app');
-    }
-
-    public function admin() {
-        return view('admin.main');
-    }
-
-    public function adminComics() {
-        $t = DB::table('comics') -> get();
-        return view('admin.comics', ['arr' => $t]);
-    }
-
-    public function redactor($id) {
-        $t = DB::table('comics') -> where('id', '=', $id)-> get();
-        return view('admin.redactor', ['arr' => $t]);
     }
 }
