@@ -21,10 +21,10 @@ Route::get('/comics{id}', [App\Http\Controllers\ComicsController::class, 'comics
 Route::get('/wheretofindus', [App\Http\Controllers\ComicsController::class, 'whereToFindUs']);
 
 Route::get('/admin', [App\Http\Controllers\Admin::class, 'admin']);
-Route::get('/admin/comics', [App\Http\Controllers\Admin::class, 'adminComics']);
+Route::get('/admin/comics', [App\Http\Controllers\Admin::class, 'сomics']);
 Route::get('/admin/comics/delete{id}', [App\Http\Controllers\Admin::class, 'delete']);
-Route::match(['get', 'post'], '/admin/comics/redactor{id}', [App\Http\Controllers\Admin::class, 'redactor']);
-Route::get('/admin/comics/redactor{id}/change', [App\Http\Controllers\Admin::class, 'change']);
+Route::get('/admin/comics/redactor{id}', [App\Http\Controllers\Admin::class, 'redactor']);
+Route::match(['get', 'post'],'/admin/comics/redactor{id}/change', [App\Http\Controllers\Admin::class, 'change']);
 Route::get('/admin/comics/create', [App\Http\Controllers\Admin::class, 'create']);
 Route::match(['get', 'post'], '/admin/comics/create/add', [App\Http\Controllers\Admin::class, 'add']);
 
