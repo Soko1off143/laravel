@@ -232,9 +232,10 @@ footer {
     margin: 30px 0 30px 0;
 }
 
+.comics {
+    flex-grow: 1;
+}
 
-
-
-.poop {
+.aboutUs {
     flex-grow: 1;
 }

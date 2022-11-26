@@ -32,4 +32,4 @@
         </tr>
     @endforeach
 </table>
-<a href="">Добавить Комикс</a>
+<a href="/Practice/laravel/public/admin/comics/create">Добавить Комикс</a>

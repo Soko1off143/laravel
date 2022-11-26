@@ -84,6 +84,10 @@ class ComicsController extends Controller
         //
     }
 
+    public function aboutUs() {
+        return view('pages.aboutUs');
+    }
+
     public function comics($id) {
         $date = DB::table('comics') -> where('id', '=', $id)-> get();
         return view('pages.comics', ['arr' => $date]);

@@ -3,7 +3,7 @@
         <img class="logo" src="media/img/logo/Logo_White.png" alt="Logo White">
         <div class="links">
             <a href="/Practice/laravel/public/catalog">Каталог</a>
-            <a href="">О нас</a>
+            <a href="/Practice/laravel/public/">О нас</a>
             <a href="/Practice/laravel/public/wheretofindus">Где нас найти?</a>
             @if (Auth::check())
                 <a href="/Practice/laravel/public/logout">Выход</a>

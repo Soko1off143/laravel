@@ -1,4 +1,4 @@
-<div class="poop">
+<div class="comics">
     @foreach ($arr as $elem)
         <img src="{{$elem->img}}" alt="Картинка {{$elem->id}}">
         <h1>Название: {{$elem->name}}</h1>
