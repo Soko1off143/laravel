@@ -32,19 +32,19 @@ body {
 
 /* Header Style */
 header {
-    width: 100%;
+    width: 100%; 
     height: 90px;
     background-color: #686868;
 }
 
-.header {
+header .header {
     width: 90%;
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
 
-.header a {
+header .header a {
     padding: 16px 0 0 0;
     font-size: 35px;
     font-family: 'Montserrat-SemiBold';
@@ -52,15 +52,15 @@ header {
     color: white;
 }
 
-.header a:hover {
+header .header a:hover {
     scale: 1.2;
 }
 
-.header a:active {
+header .header a:active {
     opacity: 0.5;
 }
 
-.header p {
+header .header p {
     padding: 16px 0 0 0;
     font-size: 35px;
     font-family: 'Montserrat-ExtraBold';
@@ -74,63 +74,65 @@ footer {
     background-color: #686868;
 }
 
-.footer {
+footer .footer {
     flex-shrink: 0;
     width: 90%;
+    height: 370px;
     display: flex;
     justify-content: space-between;
     margin: auto;
 }
 
-.logo {
+footer .logo {
     width: 330px;
     height: 330px;
     padding: 20px 0 0 0;
 }
 
-.footer .links {
-    padding: 20px 0 0 0;
+footer .footer .links {
+    padding: 10px 0 0 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.footer .links a {
+footer .footer .links a {
     font-size: 35px;
     font-family: 'Montserrat-SemiBold';
     text-decoration: none;
     color: white;
 }
 
-.footer .links a:hover {
+footer .footer .links a:hover {
     scale: 1.1;
 }
 
-.footer .links a:active {
+footer .footer .links a:active {
     opacity: 0.5;
 }
 
-.footer .split {
+footer .footer .split {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.footer .socialsIcons img {
+footer .footer .split .socialsIcons img {
     width: 90px;
     height: 90px;
 }
 
-.copyright p {
+footer .footer .split .copyright p {
     font-size: 20px;
     font-family: 'Montserrat-SemiBold';
     color: white;
     text-align: center;
 }
 
-.footer .information p {
-    padding: 25px 0 0 0;
-    font-size: 35px;
+footer .footer .information p {
+    display: flex;
+    padding: 10px 0 0 0;
+    font-size: 30px;
     font-family: 'Montserrat-SemiBold';
     color: white;
     text-align: right;
@@ -140,14 +142,14 @@ footer {
 .productList {
     flex-grow: 1;
     padding: 100px 0 100px 0;
-    max-width: 70%;
+    width: 70%;
     margin: auto;
 }
 
 .line {
-    display: flex;
+    display: inline-block;
     justify-content: space-between;
-    margin: auto;
+    margin: 0 20px 20px 20px;
 }
 
 .product {
@@ -166,21 +168,35 @@ footer {
 }
 
 .product h4 {
-    font: 32px;
+    font-size: 32px;
     font-family: 'Montserrat-Bold';
     color: #5383ff;
     text-align: center;
 }
 
-.product p {
+.productList .line .product a {
     width: 357px;
     height: 143px;
-    font-size: 32px;
+    font-size: 28px;
     font-family: 'Lora';
-    font-weight: 300;
     text-align: center;
     overflow-wrap: break-word;
     margin: 10px auto 0 auto;
+    text-decoration: none;
+    color:black;
+}
+
+.productList .line .product a:hover {
+    text-decoration: underline  ;
+}
+
+.productList .line .product input[type="button"] {
+    width: 200px;
+    height: 80px;
+    background-color: rgb(255, 255, 163);
+    font-size: 40px;
+    font-family: 'Montserrat-SemiBold';
+    margin: auto auto 20px auto;
 }
 
 /* Where to find us Style */
@@ -232,10 +248,131 @@ footer {
     margin: 30px 0 30px 0;
 }
 
-.comics {
+/* aboutUs Style*/
+.aboutUs {
+    padding: 20px 0 20px 0;
     flex-grow: 1;
+    width: 70%;
+    margin: auto;
 }
 
-.aboutUs {
+.aboutUs .company {
+    display: flex;
+    justify-content: space-between;
+}
+
+.aboutUs .logo img {
+    width: 350px;
+    height: 350px;
+}
+
+.aboutUs .slogan h1 {
+    margin: 115px 0 0 20px;
+    font-size: 96px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.aboutUs p {
+    text-align: center;
+    padding: 60px 0 0 0;
+    font-size: 40px;
+    font-family: 'Lora-Regular';
+}
+
+.aboutUs h2 {
+    padding: 60px 0 0 0;
+    font-size: 64px;
+    font-family: 'Montserrat-SemiBold';
+    text-align: center;
+}
+
+.slider {
+    height: 300px;
+    padding: 100px 0 0 0;
+    text-align: center;
+}
+
+/* Comics Style */
+.comics {
+    padding: 20px 0 20px 0;
     flex-grow: 1;
+    width: 70%;
+    margin: auto;
+}
+
+.comics .navigation {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comics .navigation a {
+    font-size: 25px;
+    font-family: 'Lora-Regular';
+    text-decoration: none;
+    color: black;
+}
+
+.comics .navigation a:hover {
+    text-decoration: underline;
+}
+
+.comics h1 {
+    padding: 20px 0 0 0;
+    font-size: 50px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.comics .detail {
+    display: flex;
+}
+
+.comics .detail .comicsImg img {
+    width: 400px;
+    height: 550px;
+}
+
+.comics .detail .detailText {
+    padding: 0 0 0 50px;
+}
+
+.comics .detail .detailText .price {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comics .detail .detailText .price h2 {
+    font-size: 40px;
+    font-family: 'Montserrat-SemiBold';
+    color:#5383ff;
+    padding: 25px 0 0 0;
+}
+
+.comics .detail .detailText .price input[type="button"] {
+    width: 300px;
+    height: 100px;
+    background-color: rgb(255, 255, 163);
+    font-size: 40px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.comics .detail .detailText .description h3 {
+    padding: 50px 0 20px 0;
+    font-size: 35px;
+    font-family: 'Montserrat-SemiBold';
+}
+
+.comics .detail .detailText .description p {
+    font-size: 20px;
+    font-family: 'Lora-Regular';
+}
+
+.comics .characteristics h3 {
+    padding: 30px 0 0 0;
+    font-size: 35px;
+    font-family: 'Montserrat-SemiBold';
+    text-align: center;
+}
+.comics .characteristics p {
+    font-size: 20px;
+    font-family: 'Lora-Regular';
 }

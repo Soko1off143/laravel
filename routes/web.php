@@ -15,8 +15,8 @@ Route::get('/login', [App\Http\Controllers\ComicsController::class, 'auth']);
 Route::get('/register', [App\Http\Controllers\ComicsController::class, 'auth']);
 Route::get('/logout', [App\Http\Controllers\ComicsController::class, 'auth']);
 
-Route::get('/', [App\Http\Controllers\ComicsController::class, 'aboutUs']);
-Route::get('/catalog', [App\Http\Controllers\ComicsController::class, 'catalog']);
+Route::get('/', [App\Http\Controllers\ComicsController::class, 'catalog']);
+Route::get('/aboutUs', [App\Http\Controllers\ComicsController::class, 'aboutUs']);
 Route::get('/comics{id}', [App\Http\Controllers\ComicsController::class, 'comics']);
 Route::get('/wheretofindus', [App\Http\Controllers\ComicsController::class, 'whereToFindUs']);
 

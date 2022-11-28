@@ -2,11 +2,18 @@
     <div class="footer">
         <img class="logo" src="media/img/logo/Logo_White.png" alt="Logo White">
         <div class="links">
-            <a href="/Practice/laravel/public/catalog">Каталог</a>
-            <a href="/Practice/laravel/public/">О нас</a>
+            <a href="/Practice/laravel/public/">Каталог</a>
+            <a href="/Practice/laravel/public/aboutUs">О нас</a>
             <a href="/Practice/laravel/public/wheretofindus">Где нас найти?</a>
             @if (Auth::check())
-                <a href="/Practice/laravel/public/logout">Выход</a>
+                <a href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();">
+                    Выйти
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                    @csrf
+                </form>
             @else
                 <a href="/Practice/laravel/public/login">Вход</a>
                 <a href="/Practice/laravel/public/register">Регистрация</a>
