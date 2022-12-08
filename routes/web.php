@@ -30,3 +30,19 @@ Route::match(['get', 'post'], '/admin/comics/create/add', [App\Http\Controllers\
 
 Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Test 
+// Задача 16.1
+Route::get('/test/form', [App\Http\Controllers\TestController::class, 'form']);
+Route::get('/test/result', [App\Http\Controllers\TestController::class, 'result']);
+
+// Задача 16.2
+Route::get('/test/form1', [App\Http\Controllers\TestController::class, 'form1']);
+Route::get('/test/result1', [App\Http\Controllers\TestController::class, 'result1']);
+
+// Задача 16.3
+Route::get('/test/form2', [App\Http\Controllers\TestController::class, 'form2']);
+Route::get('/test/result2', [App\Http\Controllers\TestController::class, 'result2']);
+
+// Задача 17.1
+Route::get('/test/response', [App\Http\Controllers\TestController::class, 'response']);
